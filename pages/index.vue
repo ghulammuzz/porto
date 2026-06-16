@@ -1098,4 +1098,172 @@ onUnmounted(() => {
   letter-spacing: 0.14em;
   color: var(--mut);
 }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  /* Nav: hide links, keep wordmark + contact */
+  .nav-links { display: none; }
+
+  .nav-wordmark {
+    padding: 0 20px;
+  }
+
+  .nav-contact {
+    padding: 0 18px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    gap: 8px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 100px 20px 80px;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .hero-role {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-title {
+    line-height: 0.88;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .hero-tags {
+    margin-top: 24px;
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 64px 20px;
+  }
+
+  .section--contact {
+    padding: 64px 20px 48px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  /* About: stack vertically, portrait below */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-card {
+    aspect-ratio: 4/3;
+    max-height: 260px;
+  }
+
+  /* Stack: single col */
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-card {
+    padding: 22px;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: 26px;
+  }
+
+  .timeline-dot {
+    left: -34px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-role {
+    font-size: 18px;
+  }
+
+  .timeline-desc {
+    font-size: 15px;
+  }
+
+  /* Work */
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coming-card {
+    padding: 24px;
+    min-height: 140px;
+  }
+
+  /* Contact */
+  .contact-heading {
+    font-size: clamp(38px, 11vw, 80px);
+    line-height: 0.92;
+    margin-bottom: 20px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact-email {
+    font-size: 13px;
+    padding: 13px 18px;
+    word-break: break-all;
+  }
+
+  .contact-pill {
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-name-solid,
+  .hero-name-outline {
+    font-size: clamp(48px, 18vw, 80px);
+  }
+
+  .nav-cursor {
+    display: none;
+  }
+
+  .nav-contact {
+    padding: 0 14px;
+    font-size: 10px;
+  }
+
+  .section-heading {
+    font-size: clamp(28px, 7vw, 48px);
+  }
+
+  .timeline-role {
+    font-size: 16px;
+  }
+}
 </style>
