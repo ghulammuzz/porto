@@ -46,7 +46,7 @@
       </div>
 
       <p data-parallax="-0.015" class="hero-bio">
-        I build the systems behind the systems — servers, pipelines, services and the intelligence that runs on top of them. Based in Malang, East Java.
+        I build the systems behind the systems — servers, pipelines, services and the intelligence that runs on top of them.
       </p>
 
       <div class="hero-scroll">
@@ -63,6 +63,7 @@
           <h2 data-reveal class="section-heading">Engineer across<br>the whole stack.</h2>
           <p data-reveal class="about-p about-p--light">
             I'm a versatile software engineer who moves comfortably between infrastructure, operations, backend services and applied AI. I like owning a problem end to end — from the metal it runs on to the interface it speaks through.
+
           </p>
           <p data-reveal class="about-p about-p--muted">
             Most of my work lives in the unglamorous middle: replacing brittle manual workflows with reliable platforms, tightening deploys, and wiring intelligence into things that used to need a human.
@@ -176,7 +177,6 @@
     <!-- FOOTER -->
     <footer class="footer">
       <span class="footer-text">© 2026 GHULAM MUZAFAR</span>
-      <span class="footer-text">MALANG · EAST JAVA · ID</span>
     </footer>
   </div>
 </template>
