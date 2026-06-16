@@ -1117,9 +1117,9 @@ onUnmounted(() => {
 
   /* Hero */
   .hero {
-    padding: 100px 20px 80px;
-    justify-content: flex-end;
-    padding-bottom: 100px;
+    padding: 88px 20px 60px;
+    justify-content: flex-start;
+    min-height: auto;
   }
 
   .hero-eyebrow {
@@ -1148,6 +1148,10 @@ onUnmounted(() => {
   .tag {
     font-size: 10px;
     padding: 7px 12px;
+  }
+
+  .hero-scroll {
+    display: none;
   }
 
   /* Sections */
