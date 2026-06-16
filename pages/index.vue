@@ -89,7 +89,6 @@
           class="glass-card"
           :style="{ transitionDelay: `${i * 0.06}s` }"
         >
-          <div class="card-letter">{{ cat.letter }}</div>
           <h3 class="card-title">{{ cat.title }}</h3>
           <div class="tags-wrap">
             <span v-for="t in cat.tags" :key="t" class="pill">{{ t }}</span>
