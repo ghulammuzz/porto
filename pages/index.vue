@@ -117,7 +117,7 @@
         </div>
       </div>
       <button class="timeline-toggle" @click="timelineExpanded = !timelineExpanded">
-        <span>{{ timelineExpanded ? 'Tampilkan lebih sedikit' : 'Tampilkan lebih banyak' }}</span>
+        <span>{{ timelineExpanded ? 'less' : 'more' }}</span>
         <span class="timeline-toggle-icon" :class="{ 'timeline-toggle-icon--open': timelineExpanded }">↓</span>
       </button>
     </section>
