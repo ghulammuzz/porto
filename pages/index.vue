@@ -190,8 +190,8 @@ const canvasRef = ref<HTMLCanvasElement | null>(null)
 
 const stack = [
   { key: 'devops', letter: 'A', title: 'DevOps', tags: ['Docker', 'Kubernetes', 'CI/CD', 'GitHub Actions', 'Terraform'] },
-  { key: 'infra', letter: 'B', title: 'Infrastructure', tags: ['Linux', 'Nginx', 'AWS / GCP', 'Monitoring', 'Networking'] },
-  { key: 'backend', letter: 'C', title: 'Backend', tags: ['Go', 'TypeScript', 'Node.js', 'PostgreSQL', 'gRPC / REST'] },
+  { key: 'infra', letter: 'B', title: 'Infrastructure', tags: ['Linux', 'Reverse Proxy / API Gateway', 'AWS / GCP', 'Monitoring', 'Networking'] },
+  { key: 'backend', letter: 'C', title: 'Backend', tags: ['Go', 'Rust', 'TypeScript', 'Node.js', 'PostgreSQL', 'gRPC / REST'] },
   { key: 'ai', letter: 'D', title: 'AI', tags: ['Python', 'LLM Integration', 'RAG', 'Vector DBs', 'ML Pipelines'] },
 ]
 
