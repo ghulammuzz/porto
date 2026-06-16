@@ -104,18 +104,22 @@
       <h2 data-reveal class="section-heading">The path so far.</h2>
       <div class="timeline">
         <div
-          v-for="(item, i) in timeline"
+          v-for="(item, i) in visibleTimeline"
           :key="i"
           data-reveal
           class="timeline-item"
-          :class="{ 'timeline-item--last': i === timeline.length - 1 }"
+          :class="{ 'timeline-item--last': i === visibleTimeline.length - 1 && timelineExpanded }"
         >
           <span class="timeline-dot" :class="{ 'timeline-dot--active': i === 0 }" />
           <div class="timeline-date">{{ item.date }}</div>
-          <h3 class="timeline-role">{{ item.role }} · <span class="timeline-co">{{ item.company }}</span></h3>
+          <h3 class="timeline-role">{{ item.role }}<span v-if="item.company"> · <span class="timeline-co">{{ item.company }}</span></span></h3>
           <p class="timeline-desc">{{ item.desc }}</p>
         </div>
       </div>
+      <button class="timeline-toggle" @click="timelineExpanded = !timelineExpanded">
+        <span>{{ timelineExpanded ? 'Tampilkan lebih sedikit' : 'Tampilkan lebih banyak' }}</span>
+        <span class="timeline-toggle-icon" :class="{ 'timeline-toggle-icon--open': timelineExpanded }">↓</span>
+      </button>
     </section>
 
     <!-- WORK -->
@@ -182,7 +186,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import * as THREE from 'three'
 
 const rootRef = ref<HTMLElement | null>(null)
@@ -196,10 +200,19 @@ const stack = [
 ]
 
 const timeline = [
-  { date: '2024 — PRESENT', role: 'Software Engineer', company: 'Company name', desc: 'Edit this with your role — what you built, the scale, the impact. Keep it to one or two punchy lines.' },
-  { date: '20XX — 2024', role: 'Previous role', company: 'Company name', desc: 'Another editable entry. Add the experience straight from your LinkedIn once you\'ve got it handy.' },
-  { date: 'EARLIER', role: 'Where it started', company: '', desc: 'Education, first internship, or the moment you started shipping. Your call.' },
+  { date: 'MAY 2026 — PRESENT', role: 'Site Reliability Engineer', company: 'Tada', desc: 'Ensuring platform reliability and uptime at scale — infrastructure observability, incident response, and service SLOs.' },
+  { date: 'NOV 2025 — PRESENT', role: 'Software Engineer', company: 'Owlies', desc: 'Building Go workers and LLM aggregation pipelines for automation-first product features. Fully remote.' },
+  { date: 'SEP 2025 — MAY 2026', role: 'DevOps Engineer', company: 'PT. Monarch Inti Teknologi', desc: 'Kubernetes, AWS, Huawei Cloud, Digital Ocean. Architected microservice infrastructure with EDA patterns, fast-paced deployment cycles, and full observability stack.' },
+  { date: 'JUN 2025 — JUN 2026', role: 'Founding & Software Engineer', company: 'Mindra Solutions', desc: 'Go, Python, Celery workers, LLM integration, ffmpeg pipelines, and Agentic AI. Building the core platform from the ground up. Remote from Estonia.' },
+  { date: 'FEB 2024 — JUL 2024', role: 'DevOps Engineer', company: 'Traveloka', desc: 'AWS, ECS, Terraform, Datadog. Managed microservice infrastructure and CI/CD for one of Southeast Asia\'s largest travel platforms. Spring-based service fleet.' },
+  { date: 'JUL 2022 — JUN 2026', role: 'Freelance Software Engineer', company: 'Self Employed', desc: 'Kubernetes, GCP, AWS, IaC, EDA. Four years delivering platform, SaaS, and microservice projects for clients globally. Remote.' },
+  { date: 'AUG 2023 — JAN 2024', role: 'Cloud Computing Cohort', company: 'Bangkit Academy · Google, Tokopedia, Gojek, Traveloka', desc: 'Intensive cloud engineering program led by Google and top Indonesian tech companies.' },
+  { date: 'FEB 2023 — OCT 2023', role: 'Software Engineer', company: 'PT. Inovasi Utama Nusantara', desc: 'Part-time engineering role building and shipping product features. Hybrid — Malang, East Java.' },
+  { date: 'JUL 2022 — JUN 2023', role: 'Software Engineer', company: 'PUI-PT DLI · Internship', desc: 'Internship at a research unit — built and maintained software systems. Malang, East Java.' },
 ]
+
+const timelineExpanded = ref(false)
+const visibleTimeline = computed(() => timelineExpanded.value ? timeline : timeline.slice(0, 4))
 
 let raf: number | null = null
 let renderer: THREE.WebGLRenderer | null = null
@@ -1097,6 +1110,39 @@ onUnmounted(() => {
   font-size: 11px;
   letter-spacing: 0.14em;
   color: var(--mut);
+}
+
+/* ── TIMELINE TOGGLE ── */
+.timeline-toggle {
+  margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #b6b4d4;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.timeline-toggle:hover {
+  color: var(--ink);
+  border-color: var(--va);
+}
+
+.timeline-toggle-icon {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(.2,.7,.2,1);
+}
+
+.timeline-toggle-icon--open {
+  transform: rotate(180deg);
 }
 
 /* ── RESPONSIVE ── */
