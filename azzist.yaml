@@ -1,0 +1,16 @@
+# azzist project config — SAFE TO COMMIT (placeholders only, no secrets).
+# Secrets live in azzist.local.yaml (gitignored).
+
+project:
+  name: portopage           # used to namespace docker network/containers: azzist_<name>_*
+  stack: nuxt               # v1 supported: nuxt | (later) go | gofiber | python
+
+domain: ghulammuzz.com      # public domain to attach via Cloudflare
+
+deploy:
+  proxy: auto               # auto | nginx | traefik
+  port: auto                # auto: pick a free host port on the server | or a fixed number e.g. 8080
+  server: prod              # references a server entry under servers: in azzist.local.yaml
+
+database: none
+cache: none
