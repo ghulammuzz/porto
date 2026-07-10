@@ -145,12 +145,9 @@
       </a>
 
       <div class="work-grid">
-        <a
+        <div
           data-reveal
           data-tilt
-          href="https://github.com/ghulammuzz/clauzz-cli"
-          target="_blank"
-          rel="noopener"
           class="proj-card"
         >
           <span class="coming-num">02</span>
@@ -158,8 +155,8 @@
             <h3 class="coming-title">clauzz-cli</h3>
             <p class="coming-desc">CLI tool for managing and sharing Claude Code sessions — register, name, and load context across conversations.</p>
           </div>
-          <div class="proj-cta">View on GitHub <span>→</span></div>
-        </a>
+          <div class="proj-cta">still private, waiting grand release</div>
+        </div>
         <div data-reveal data-tilt class="coming-card">
           <span class="coming-num">03</span>
           <div>
