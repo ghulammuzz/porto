@@ -126,19 +126,24 @@
       <div data-reveal class="section-label">04 / WORK</div>
       <h2 data-reveal class="section-heading">Selected work.</h2>
 
-      <div
+      <a
         data-reveal
         data-tilt
+        href="https://github.com/ghulammuzz/clauzz-cli"
+        target="_blank"
+        rel="noopener"
         class="featured-card"
       >
         <div class="featured-glow" />
         <div class="featured-meta">
           <span class="featured-badge">01</span>
+          <span class="pill">v0.1.1</span>
+          <span class="pill">Go</span>
         </div>
         <h3 class="featured-title">clauzz-cli</h3>
         <p class="featured-desc">CLI tool for managing and sharing Claude Code sessions — register, name, and load context across conversations.</p>
-        <div class="featured-cta">still private, waiting grand release</div>
-      </div>
+        <div class="featured-cta">View on GitHub <span>→</span></div>
+      </a>
 
       <div class="work-grid">
         <div data-reveal data-tilt class="coming-card">
