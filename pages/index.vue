@@ -126,36 +126,27 @@
       <div data-reveal class="section-label">04 / WORK</div>
       <h2 data-reveal class="section-heading">Selected work.</h2>
 
-      <a
+      <div
         data-reveal
         data-tilt
-        href="https://github.com/ghulammuzz/zzpeo"
-        target="_blank"
-        rel="noopener"
         class="featured-card"
       >
         <div class="featured-glow" />
         <div class="featured-meta">
-          <span class="featured-badge">FEATURED</span>
-          <span class="pill">TypeScript</span>
+          <span class="featured-badge">01</span>
         </div>
-        <h3 class="featured-title">zzpeo</h3>
-        <p class="featured-desc">An internal platform to manage servers, deployments, env vars and services — replacing manual SSH workflows with one reliable control plane.</p>
-        <div class="featured-cta">View on GitHub <span>→</span></div>
-      </a>
+        <h3 class="featured-title">clauzz-cli</h3>
+        <p class="featured-desc">CLI tool for managing and sharing Claude Code sessions — register, name, and load context across conversations.</p>
+        <div class="featured-cta">still private, waiting grand release</div>
+      </div>
 
       <div class="work-grid">
-        <div
-          data-reveal
-          data-tilt
-          class="proj-card"
-        >
+        <div data-reveal data-tilt class="coming-card">
           <span class="coming-num">02</span>
           <div>
-            <h3 class="coming-title">clauzz-cli</h3>
-            <p class="coming-desc">CLI tool for managing and sharing Claude Code sessions — register, name, and load context across conversations.</p>
+            <h3 class="coming-title">Coming soon</h3>
+            <p class="coming-desc">A new project is in the works.</p>
           </div>
-          <div class="proj-cta">still private, waiting grand release</div>
         </div>
         <div data-reveal data-tilt class="coming-card">
           <span class="coming-num">03</span>
