@@ -145,13 +145,21 @@
       </a>
 
       <div class="work-grid">
-        <div data-reveal data-tilt class="coming-card">
+        <a
+          data-reveal
+          data-tilt
+          href="https://github.com/ghulammuzz/clauzz-cli"
+          target="_blank"
+          rel="noopener"
+          class="proj-card"
+        >
           <span class="coming-num">02</span>
           <div>
-            <h3 class="coming-title">Coming soon</h3>
-            <p class="coming-desc">A new project is in the works.</p>
+            <h3 class="coming-title">clauzz-cli</h3>
+            <p class="coming-desc">CLI tool for managing and sharing Claude Code sessions — register, name, and load context across conversations.</p>
           </div>
-        </div>
+          <div class="proj-cta">View on GitHub <span>→</span></div>
+        </a>
         <div data-reveal data-tilt class="coming-card">
           <span class="coming-num">03</span>
           <div>
@@ -1031,6 +1039,42 @@ onUnmounted(() => {
   margin: 0;
   font-size: 14px;
   color: var(--mut);
+}
+
+.proj-card {
+  padding: 36px;
+  border-radius: 20px;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.proj-card:hover {
+  border-color: rgba(160, 140, 255, 0.5);
+}
+
+.proj-cta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--mut);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  transition: color 0.2s;
+}
+
+.proj-card:hover .proj-cta {
+  color: #a08cff;
 }
 
 /* ── CONTACT ── */
