@@ -137,7 +137,7 @@
         <div class="featured-glow" />
         <div class="featured-meta">
           <span class="featured-badge">01</span>
-          <span class="pill">v0.1.1</span>
+          <span class="pill">v0.3.5</span>
           <span class="pill">Go</span>
         </div>
         <h3 class="featured-title">clauzz-cli</h3>
